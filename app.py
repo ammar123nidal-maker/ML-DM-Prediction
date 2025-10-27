@@ -1,14 +1,6 @@
 import streamlit as st
 import joblib
 import numpy as np
-import gdown
-import os
-
-url = "https://drive.google.com/file/d/1wFab408HpQBm6sXVySpq2W6jG9nCVO4h/view?usp=drive_link"
-output = "my_model.pkl"
-
-if not os.path.exists(output):
-    gdown.download(url, output, quiet=False)
 
 # تحميل النموذج
 model = joblib.load('my_model.pkl')
@@ -50,5 +42,6 @@ if st.button("🔍 التنبؤ"):
         st.error("🔴 المريض مصاب بالسكري")
     else:
         st.success("🟢 المريض غير مصاب بالسكري")
+
 
 
