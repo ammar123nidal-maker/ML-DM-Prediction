@@ -39,9 +39,9 @@ if st.button("🔍 التنبؤ"):
     prediction = model.predict(X_new)
 
 
-   if prediction[0] == 1:
+     if prediction[0] == 1:
         st.error("🔴 المريض مصاب بالسكري")
-    else:
+     else:
         st.success("🟢 المريض غير مصاب بالسكري")
 
 
